@@ -5,8 +5,12 @@ import React from 'react'
 import {render} from 'react-dom'
 import App from './components/app'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './main.less'
 
-
+window.state = {
+  users: []
+}
+window.log = window.console.log
 render(<App></App>, document.getElementById('app'))
 
 // fetch('../data/tsconfig.json')
