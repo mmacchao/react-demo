@@ -30,6 +30,7 @@ export default class Home extends Component {
         <div>
           <a href="#" onClick={this.togglePage.bind(this, '注册')}>注册</a>
           <a href="#" onClick={this.togglePage.bind(this, '登陆')}>登陆</a>
+          hello world
         </div>
         {/*主体*/}
         <div>
