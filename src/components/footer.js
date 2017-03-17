@@ -2,6 +2,7 @@
  * Created by 6396000799 on 2017/3/8.
  */
 import React from 'react'
+import {Link} from 'react-router-dom'
 export default class Footer extends React.Component {
   constructor(props) {
     super(props)
@@ -10,9 +11,9 @@ export default class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <a href="#" className="tab">主页</a>
-        <a href="#" className="tab">发表</a>
-        <a href="#" className="tab">我</a>
+        <Link to="/" className="tab">主页</Link>
+        <Link to="/public" className="tab">发表</Link>
+        <Link to="/me" className="tab">我</Link>
       </div>
     )
   }
