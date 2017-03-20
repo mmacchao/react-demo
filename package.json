@@ -13,8 +13,7 @@
     "bootstrap-datetimepicker": "0.0.7",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "vue": "^2.1.6",
-    "vue-i18n": "^4.10.0"
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -22,18 +21,18 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.16.0",
+    "body-parser": "^1.17.1",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
+    "express": "^4.15.2",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "mongoose": "^4.8.7",
     "pikaday": "^1.5.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "vue-loader": "^9.7.0",
-    "vue-router": "^2.2.0",
-    "vuex": "^2.1.1",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^1.16.2",
     "whatwg-fetch": "^2.0.1"

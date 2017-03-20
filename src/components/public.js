@@ -3,13 +3,13 @@
  */
 import React from 'react'
 export default class Public extends React.Component {
+  state = {
+    msg: '',
+    username: '',
+    isSuccess: false,
+  }
   constructor(props) {
     super(props)
-    this.state = {
-      msg: '',
-      username: '',
-      isSuccess: false,
-    }
   }
   submit = () => {
     let {msg, username} = this.state
