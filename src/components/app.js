@@ -2,31 +2,32 @@
  * Created by 6396000799 on 2017/3/8.
  */
 import React, {Component} from 'react'
-import Home from './home.js'
-import Me from './me'
-import Public from './public'
-import Footer from './footer'
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
-export default () => (
-  <Router>
-    <div>
-      <div className="box">
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/public" component={Public}></Route>
-        <Route path="/me" component={Me}></Route>
+import Home from './home'
+import Welcome from './welcome'
+export default class App extends Component {
+  state = {
+    content: null,
+    isLogin: false,
+  }
+  loginHandler = () => {
+    this.setState({content: <Home></Home>})
+  }
+  componentWillMount() {
+    // let {isLogin} = this.state
+    let isLogin = window.sessionStorage.getItem('isLogin')
+    log(isLogin)
+    let content = isLogin ? <Home></Home> : <Welcome login={this.loginHandler}></Welcome>
+    this.setState({content})
+  }
+  render() {
+    let {content} = this.state
+    let template = (
+      <div className="container">
+        <div className="box">
+          {content}
+        </div>
       </div>
-      <Footer/>
-    </div>
-  </Router>
-)
-// class App extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {msg: 'hello world 你好 世界'}
-//   }
-//   render() {
-//     return (
-//
-//     )
-//   }
-// }
+    )
+    return template
+  }
+}

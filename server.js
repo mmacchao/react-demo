@@ -55,6 +55,17 @@ db.once('open', () => {
     })
   })
 
+  // 登陆
+  app.post('/login', (req, res) => {
+    User.find(req.body, (err, users) => {
+      log(users)
+      let obj = {}
+      if(users.length) obj = {res: true, message: ''}
+      else obj = {res: false, message: ''}
+      res.send(obj)
+    })
+  })
+
   // 添加评论
   app.post('/comment', (req, res) => {
     const comment = new Comment(req.body)

@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
   }
   render() {
     return (
-      <div className="footer">
+      <div className="footer clearfix">
         <Link to="/" className="tab">主页</Link>
         <Link to="/public" className="tab">发表</Link>
         <Link to="/me" className="tab">我</Link>
